@@ -5,6 +5,7 @@
 <title>JavaScript課題② FizzBuzz問題</title>
 <meta name="description" content="JavaScript課題② FizzBuzz問題">
 <link rel="stylesheet" type="text/css" href="style.css">
+<script defer src="./main.js"></script>
 </head>
 <body>
 <header><h1>FizzBuzz問題</h1></header>
@@ -18,48 +19,9 @@
 <td><input type="text" id="BuzzNum" size="30" maxlength="20" placeholder="整数値を入力してください"></td>
 </tr>
 </table>
-<button class="favorite styled" type="button" onclick="buttonClick()">実行</button>
+<button type="button" onclick="buttonClick()">実行</button>
 <br>
 【出力】
-<script type="text/javascript">
-function buttonClick(){
-	
-	//var rem_ul1 = document.getElementById("ul1");
-	//rem_ul1.remove();
-	//var ulold = document.getElementsByTagName('ul');
-	//ulold.parentNode.removeChild(ul);
-	//document.body.ul.innerHTML = "";
-	
-	var FizzNum = document.getElementById('FizzNum');	
-	var BuzzNum = document.getElementById('BuzzNum');	
-	var ul = document.createElement('ul');	
-	//ul.id = "ul1";
-	var pattern = new RegExp(/^[1-9]\d?$/);
-	
-	for(var i=1; i<100; i++) {
-	
-		var li = document.createElement('li');
-	
-		//FizzNumとBuzzNumに入力された値が半角整数値かチェック
-		if (pattern.test(FizzNum.value) && pattern.test(BuzzNum.value)) {
-			if (i%FizzNum.value == 0 && i%BuzzNum.value == 0) {
-				li.textContent = 'FizzBuzz' + i;
-				ul.appendChild(li);
-			} else if (i%FizzNum.value == 0) {
-				li.textContent = 'Fizz' + i;
-				ul.appendChild(li);
-			} else if (i%BuzzNum.value == 0) {
-				li.textContent = 'Buzz' + i;
-				ul.appendChild(li);
-			}
-		} else {
-			li.textContent = '整数値を入力してください'
-			ul.appendChild(li);	
-			break;
-		}
-	}
-	document.body.appendChild(ul);
-}
-</script>
+<ul id="items"></ul>
 </body>
 </html>
