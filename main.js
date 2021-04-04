@@ -10,7 +10,7 @@ function buttonClick(){
 	
 		const item = document.createElement('li');
 	
-		//FizzNumとBuzzNumに入力された値が半角整数値かチェック
+		//FizzNum縺ｨBuzzNum縺ｫ蜈･蜉帙＆繧後◆蛟､縺悟濠隗呈紛謨ｰ蛟､縺九メ繧ｧ繝�繧ｯ
 		if (pattern.test(FizzNum.value) && pattern.test(BuzzNum.value)) {
 			if (i%FizzNum.value == 0 && i%BuzzNum.value == 0) {
 				item.textContent = 'FizzBuzz' + i;
@@ -23,7 +23,7 @@ function buttonClick(){
 				items.appendChild(item);
 			}
 		} else {
-			item.textContent = '整数値を入力してください'
+			item.textContent = '謨ｴ謨ｰ蛟､繧貞�･蜉帙＠縺ｦ縺上□縺輔＞'
 			items.appendChild(item);	
 			break;
 		}
